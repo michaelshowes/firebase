@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
-import getMovieList from './Movies';
+import getMovieList from './MovieList';
 
 export default function AddMovie() {
 	const [newMovie, setNewMovie] = useState({
+		id: '',
 		title: '',
 		genre: '',
 		releaseYear: 0,

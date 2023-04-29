@@ -1,7 +1,7 @@
 import './app.scss';
 import AddMovie from './components/AddMovie';
 import Auth from './components/Auth';
-import Movies from './components/Movies';
+import MovieList from './components/MovieList';
 import SendImages from './components/SendImages';
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
 			<br />
 			<br />
 			<AddMovie />
-			<Movies />
+			<MovieList />
 			<br />
 			<br />
 			<SendImages />

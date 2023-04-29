@@ -3,8 +3,16 @@ import { db } from '../config/firebase';
 import { getDocs, collection } from 'firebase/firestore';
 import Movie from './Movie';
 
-export default function Movies() {
-	const [movieList, setmovieList] = useState([]);
+export default function MovieList() {
+	const [movieList, setmovieList] = useState([
+		{
+			id: '',
+			title: '',
+			genre: '',
+			releaseYear: 0,
+			hasOscar: false
+		}
+	]);
 
 	const moviesCollectionRef = collection(db, 'movies');
 
@@ -26,12 +34,15 @@ export default function Movies() {
 
 	useEffect(() => {
 		getMovieList();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
 		<div>
 			{movieList.map((movie) => (
-				<Movie movie={movie} />
+				<div key={movie.id}>
+					<Movie movie={movie} />
+				</div>
 			))}
 		</div>
 	);

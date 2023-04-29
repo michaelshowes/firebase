@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addDoc, collection, deleteDoc, doc } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import getMovieList from './Movies';
 

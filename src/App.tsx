@@ -8,13 +8,13 @@ export default function App() {
 	return (
 		<div className='app'>
 			<h1>Firebase</h1>
-			{/* <Auth />
+			<Auth />
 			<br />
 			<br />
 			<AddMovie />
 			<Movies />
 			<br />
-			<br /> */}
+			<br />
 			<SendImages />
 		</div>
 	);
